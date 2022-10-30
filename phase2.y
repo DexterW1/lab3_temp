@@ -103,10 +103,10 @@ Expression:   Mult_Exp
               ;
 	       
 	       
-Loop_Statement:   DO BEGINLOOP Statement SEMICOLON ENDLOOP WHILE Bool_Exp
-                  {printf("Loop_Statement->DO BEGINLOOP Statement SEMICOLON ENDLOOP WHILE Bool_Exp\n");}
-                  | WHILE Bool_Exp BEGINLOOP Statement SEMICOLON ENDLOOP
-                  {printf("Loop_Statement->WHILE Bool_Exp BEGINLOOP Statement SEMICOLON ENDLOOP\n");}
+Loop_Statement:   DO LOOP_BEGIN Statement SEMICOLON LOOP_END WHILE Bool_Exp
+                  {printf("Loop_Statement->DO LOOP_BEGIN Statement SEMICOLON LOOP_END WHILE Bool_Exp\n");}
+                  | WHILE Bool_Exp  LOOP_BEGIN Statement SEMICOLON LOOP_END
+                  {printf("Loop_Statement->WHILE Bool_Exp LOOP_BEGIN Statement SEMICOLON LOOP_END\n");}
                   ;	       
 
 
